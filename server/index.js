@@ -10,8 +10,8 @@ const configuration = new Configuration({
   basePath: PlaidEnvironments.sandbox,
   baseOptions: {
     headers: { // use a .env to ID this info before deployment
-      'PLAID-CLIENT-ID': '66d2bbf460b266001abadee9',
-      'PLAID-SECRET': '7eda92bae73fb8156a584e1a712231',
+      'PLAID-CLIENT-ID': 'PASTE YOURS HERE',
+      'PLAID-SECRET': 'PASTE YOURS HERE',
     },
   },
 });
@@ -114,7 +114,7 @@ app.post('/transactions', async (req, res) => {
       
         // Save all transactions and the final cursor in MongoDB
         await UserModel.updateOne(
-            { _id: '67263e118b4b4b01bbcb3954' }, // *** modify this to get userId dynamically
+            { _id: 'PASTE YOURS HERE' }, // *** modify this to get userId dynamically
             {
                 $set: {
                     transactions: allTransactions, 
@@ -140,7 +140,7 @@ app.post('/transactions', async (req, res) => {
 
 // ------------------- MongoDB ------------------- //
 
-mongoose.connect("mongodb://localhost:27017/Finance")
+mongoose.connect("mongodb://localhost:PASTE YOURS HERE")
 
 
 app.post('/login', (req,res) => {
